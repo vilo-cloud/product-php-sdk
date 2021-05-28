@@ -7,8 +7,20 @@
     },
     "servers": [
         {
+            "url": "https://product-service.staging.vilo.cloud/",
+            "description": "Staging"
+        },
+        {
+            "url": "https://product-service.vilo.cloud/",
+            "description": "Production"
+        },
+        {
+            "url": "https://product-service.development.vilo.local/",
+            "description": "Development"
+        },
+        {
             "url": "/",
-            "description": ""
+            "description": "Local Server"
         }
     ],
     "paths": {
