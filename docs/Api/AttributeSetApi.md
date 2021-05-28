@@ -1,6 +1,6 @@
 # Vilo\ProductService\AttributeSetApi
 
-All URIs are relative to https://product-service.staging.vilo.cloud.
+All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

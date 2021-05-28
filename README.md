@@ -68,7 +68,7 @@ try {
 
 ## API Endpoints
 
-All URIs are relative to *https://product-service.staging.vilo.cloud*
+All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

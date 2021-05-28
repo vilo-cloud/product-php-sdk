@@ -83,7 +83,7 @@ class Configuration
      *
      * @var string
      */
-    protected $host = 'https://product-service.staging.vilo.cloud';
+    protected $host = 'http://localhost';
 
     /**
      * User agent of the HTTP request, set to "OpenAPI-Generator/{version}/PHP" by default
@@ -438,20 +438,8 @@ class Configuration
     {
         return [
             [
-                "url" => "https://product-service.staging.vilo.cloud",
-                "description" => "Staging",
-            ],
-            [
-                "url" => "https://product-service.vilo.cloud",
-                "description" => "Production",
-            ],
-            [
-                "url" => "https://product-service.development.vilo.local",
-                "description" => "Development",
-            ],
-            [
                 "url" => "",
-                "description" => "Local Server",
+                "description" => "No description provided",
             ]
         ];
     }
