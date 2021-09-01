@@ -129,7 +129,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/ld+json`, `application/hal+json`, `application/vnd.api+json`, `application/json`, `application/xml`, `text/xml`, `application/x-yaml`, `text/csv`, `text/html`
+- **Accept**: `application/ld+json`, `text/csv`, `text/html`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -185,7 +185,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/ld+json`, `application/hal+json`, `application/vnd.api+json`, `application/json`, `application/xml`, `text/xml`, `application/x-yaml`, `text/csv`, `text/html`
+- **Accept**: `application/ld+json`, `text/csv`, `text/html`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -194,7 +194,7 @@ No authorization required
 ## `patchProductGroupItemItem()`
 
 ```php
-patchProductGroupItemItem($id, $product_group_item_jsonld_product_group_item_read): \Vilo\ProductService\Model\ProductGroupItemJsonldProductGroupItemRead
+patchProductGroupItemItem($id, $product_group_item): \Vilo\ProductService\Model\ProductGroupItemJsonldProductGroupItemRead
 ```
 
 Updates the ProductGroupItem resource.
@@ -215,10 +215,10 @@ $apiInstance = new Vilo\ProductService\Api\ProductGroupItemApi(
     new GuzzleHttp\Client()
 );
 $id = 'id_example'; // string | Resource identifier
-$product_group_item_jsonld_product_group_item_read = new \Vilo\ProductService\Model\ProductGroupItemJsonldProductGroupItemRead(); // \Vilo\ProductService\Model\ProductGroupItemJsonldProductGroupItemRead | The updated ProductGroupItem resource
+$product_group_item = new \Vilo\ProductService\Model\ProductGroupItem(); // \Vilo\ProductService\Model\ProductGroupItem | The updated ProductGroupItem resource
 
 try {
-    $result = $apiInstance->patchProductGroupItemItem($id, $product_group_item_jsonld_product_group_item_read);
+    $result = $apiInstance->patchProductGroupItemItem($id, $product_group_item);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductGroupItemApi->patchProductGroupItemItem: ', $e->getMessage(), PHP_EOL;
@@ -230,7 +230,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Resource identifier |
- **product_group_item_jsonld_product_group_item_read** | [**\Vilo\ProductService\Model\ProductGroupItemJsonldProductGroupItemRead**](../Model/ProductGroupItemJsonldProductGroupItemRead.md)| The updated ProductGroupItem resource |
+ **product_group_item** | [**\Vilo\ProductService\Model\ProductGroupItem**](../Model/ProductGroupItem.md)| The updated ProductGroupItem resource |
 
 ### Return type
 
@@ -242,8 +242,8 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: `application/merge-patch+json`, `application/vnd.api+json`
-- **Accept**: `application/ld+json`, `application/hal+json`, `application/vnd.api+json`, `application/json`, `application/xml`, `text/xml`, `application/x-yaml`, `text/csv`, `text/html`
+- **Content-Type**: `application/merge-patch+json`
+- **Accept**: `application/ld+json`, `text/csv`, `text/html`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -252,7 +252,7 @@ No authorization required
 ## `postProductGroupItemCollection()`
 
 ```php
-postProductGroupItemCollection($product_group_item_jsonld_product_group_item_read): \Vilo\ProductService\Model\ProductGroupItemJsonldProductGroupItemRead
+postProductGroupItemCollection($product_group_item_jsonld): \Vilo\ProductService\Model\ProductGroupItemJsonldProductGroupItemRead
 ```
 
 Creates a ProductGroupItem resource.
@@ -272,10 +272,10 @@ $apiInstance = new Vilo\ProductService\Api\ProductGroupItemApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$product_group_item_jsonld_product_group_item_read = new \Vilo\ProductService\Model\ProductGroupItemJsonldProductGroupItemRead(); // \Vilo\ProductService\Model\ProductGroupItemJsonldProductGroupItemRead | The new ProductGroupItem resource
+$product_group_item_jsonld = new \Vilo\ProductService\Model\ProductGroupItemJsonld(); // \Vilo\ProductService\Model\ProductGroupItemJsonld | The new ProductGroupItem resource
 
 try {
-    $result = $apiInstance->postProductGroupItemCollection($product_group_item_jsonld_product_group_item_read);
+    $result = $apiInstance->postProductGroupItemCollection($product_group_item_jsonld);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductGroupItemApi->postProductGroupItemCollection: ', $e->getMessage(), PHP_EOL;
@@ -286,7 +286,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_group_item_jsonld_product_group_item_read** | [**\Vilo\ProductService\Model\ProductGroupItemJsonldProductGroupItemRead**](../Model/ProductGroupItemJsonldProductGroupItemRead.md)| The new ProductGroupItem resource |
+ **product_group_item_jsonld** | [**\Vilo\ProductService\Model\ProductGroupItemJsonld**](../Model/ProductGroupItemJsonld.md)| The new ProductGroupItem resource |
 
 ### Return type
 
@@ -298,8 +298,8 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: `application/ld+json`, `application/hal+json`, `application/vnd.api+json`, `application/json`, `application/xml`, `text/xml`, `application/x-yaml`, `text/csv`, `text/html`
-- **Accept**: `application/ld+json`, `application/hal+json`, `application/vnd.api+json`, `application/json`, `application/xml`, `text/xml`, `application/x-yaml`, `text/csv`, `text/html`
+- **Content-Type**: `application/ld+json`, `text/csv`, `text/html`
+- **Accept**: `application/ld+json`, `text/csv`, `text/html`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -308,7 +308,7 @@ No authorization required
 ## `putProductGroupItemItem()`
 
 ```php
-putProductGroupItemItem($id, $product_group_item_jsonld_product_group_item_read): \Vilo\ProductService\Model\ProductGroupItemJsonldProductGroupItemRead
+putProductGroupItemItem($id, $product_group_item_jsonld): \Vilo\ProductService\Model\ProductGroupItemJsonldProductGroupItemRead
 ```
 
 Replaces the ProductGroupItem resource.
@@ -329,10 +329,10 @@ $apiInstance = new Vilo\ProductService\Api\ProductGroupItemApi(
     new GuzzleHttp\Client()
 );
 $id = 'id_example'; // string | Resource identifier
-$product_group_item_jsonld_product_group_item_read = new \Vilo\ProductService\Model\ProductGroupItemJsonldProductGroupItemRead(); // \Vilo\ProductService\Model\ProductGroupItemJsonldProductGroupItemRead | The updated ProductGroupItem resource
+$product_group_item_jsonld = new \Vilo\ProductService\Model\ProductGroupItemJsonld(); // \Vilo\ProductService\Model\ProductGroupItemJsonld | The updated ProductGroupItem resource
 
 try {
-    $result = $apiInstance->putProductGroupItemItem($id, $product_group_item_jsonld_product_group_item_read);
+    $result = $apiInstance->putProductGroupItemItem($id, $product_group_item_jsonld);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductGroupItemApi->putProductGroupItemItem: ', $e->getMessage(), PHP_EOL;
@@ -344,7 +344,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Resource identifier |
- **product_group_item_jsonld_product_group_item_read** | [**\Vilo\ProductService\Model\ProductGroupItemJsonldProductGroupItemRead**](../Model/ProductGroupItemJsonldProductGroupItemRead.md)| The updated ProductGroupItem resource |
+ **product_group_item_jsonld** | [**\Vilo\ProductService\Model\ProductGroupItemJsonld**](../Model/ProductGroupItemJsonld.md)| The updated ProductGroupItem resource |
 
 ### Return type
 
@@ -356,8 +356,8 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: `application/ld+json`, `application/hal+json`, `application/vnd.api+json`, `application/json`, `application/xml`, `text/xml`, `application/x-yaml`, `text/csv`, `text/html`
-- **Accept**: `application/ld+json`, `application/hal+json`, `application/vnd.api+json`, `application/json`, `application/xml`, `text/xml`, `application/x-yaml`, `text/csv`, `text/html`
+- **Content-Type**: `application/ld+json`, `text/csv`, `text/html`
+- **Accept**: `application/ld+json`, `text/csv`, `text/html`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

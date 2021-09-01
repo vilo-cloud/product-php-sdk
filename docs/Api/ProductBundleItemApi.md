@@ -129,7 +129,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/ld+json`, `application/hal+json`, `application/vnd.api+json`, `application/json`, `application/xml`, `text/xml`, `application/x-yaml`, `text/csv`, `text/html`
+- **Accept**: `application/ld+json`, `text/csv`, `text/html`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -185,7 +185,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/ld+json`, `application/hal+json`, `application/vnd.api+json`, `application/json`, `application/xml`, `text/xml`, `application/x-yaml`, `text/csv`, `text/html`
+- **Accept**: `application/ld+json`, `text/csv`, `text/html`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -194,7 +194,7 @@ No authorization required
 ## `patchProductBundleItemItem()`
 
 ```php
-patchProductBundleItemItem($id, $product_bundle_item_jsonld_product_bundle_item_read): \Vilo\ProductService\Model\ProductBundleItemJsonldProductBundleItemRead
+patchProductBundleItemItem($id, $product_bundle_item): \Vilo\ProductService\Model\ProductBundleItemJsonldProductBundleItemRead
 ```
 
 Updates the ProductBundleItem resource.
@@ -215,10 +215,10 @@ $apiInstance = new Vilo\ProductService\Api\ProductBundleItemApi(
     new GuzzleHttp\Client()
 );
 $id = 'id_example'; // string | Resource identifier
-$product_bundle_item_jsonld_product_bundle_item_read = new \Vilo\ProductService\Model\ProductBundleItemJsonldProductBundleItemRead(); // \Vilo\ProductService\Model\ProductBundleItemJsonldProductBundleItemRead | The updated ProductBundleItem resource
+$product_bundle_item = new \Vilo\ProductService\Model\ProductBundleItem(); // \Vilo\ProductService\Model\ProductBundleItem | The updated ProductBundleItem resource
 
 try {
-    $result = $apiInstance->patchProductBundleItemItem($id, $product_bundle_item_jsonld_product_bundle_item_read);
+    $result = $apiInstance->patchProductBundleItemItem($id, $product_bundle_item);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductBundleItemApi->patchProductBundleItemItem: ', $e->getMessage(), PHP_EOL;
@@ -230,7 +230,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Resource identifier |
- **product_bundle_item_jsonld_product_bundle_item_read** | [**\Vilo\ProductService\Model\ProductBundleItemJsonldProductBundleItemRead**](../Model/ProductBundleItemJsonldProductBundleItemRead.md)| The updated ProductBundleItem resource |
+ **product_bundle_item** | [**\Vilo\ProductService\Model\ProductBundleItem**](../Model/ProductBundleItem.md)| The updated ProductBundleItem resource |
 
 ### Return type
 
@@ -242,8 +242,8 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: `application/merge-patch+json`, `application/vnd.api+json`
-- **Accept**: `application/ld+json`, `application/hal+json`, `application/vnd.api+json`, `application/json`, `application/xml`, `text/xml`, `application/x-yaml`, `text/csv`, `text/html`
+- **Content-Type**: `application/merge-patch+json`
+- **Accept**: `application/ld+json`, `text/csv`, `text/html`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -252,7 +252,7 @@ No authorization required
 ## `postProductBundleItemCollection()`
 
 ```php
-postProductBundleItemCollection($product_bundle_item_jsonld_product_bundle_item_read): \Vilo\ProductService\Model\ProductBundleItemJsonldProductBundleItemRead
+postProductBundleItemCollection($product_bundle_item_jsonld): \Vilo\ProductService\Model\ProductBundleItemJsonldProductBundleItemRead
 ```
 
 Creates a ProductBundleItem resource.
@@ -272,10 +272,10 @@ $apiInstance = new Vilo\ProductService\Api\ProductBundleItemApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$product_bundle_item_jsonld_product_bundle_item_read = new \Vilo\ProductService\Model\ProductBundleItemJsonldProductBundleItemRead(); // \Vilo\ProductService\Model\ProductBundleItemJsonldProductBundleItemRead | The new ProductBundleItem resource
+$product_bundle_item_jsonld = new \Vilo\ProductService\Model\ProductBundleItemJsonld(); // \Vilo\ProductService\Model\ProductBundleItemJsonld | The new ProductBundleItem resource
 
 try {
-    $result = $apiInstance->postProductBundleItemCollection($product_bundle_item_jsonld_product_bundle_item_read);
+    $result = $apiInstance->postProductBundleItemCollection($product_bundle_item_jsonld);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductBundleItemApi->postProductBundleItemCollection: ', $e->getMessage(), PHP_EOL;
@@ -286,7 +286,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_bundle_item_jsonld_product_bundle_item_read** | [**\Vilo\ProductService\Model\ProductBundleItemJsonldProductBundleItemRead**](../Model/ProductBundleItemJsonldProductBundleItemRead.md)| The new ProductBundleItem resource |
+ **product_bundle_item_jsonld** | [**\Vilo\ProductService\Model\ProductBundleItemJsonld**](../Model/ProductBundleItemJsonld.md)| The new ProductBundleItem resource |
 
 ### Return type
 
@@ -298,8 +298,8 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: `application/ld+json`, `application/hal+json`, `application/vnd.api+json`, `application/json`, `application/xml`, `text/xml`, `application/x-yaml`, `text/csv`, `text/html`
-- **Accept**: `application/ld+json`, `application/hal+json`, `application/vnd.api+json`, `application/json`, `application/xml`, `text/xml`, `application/x-yaml`, `text/csv`, `text/html`
+- **Content-Type**: `application/ld+json`, `text/csv`, `text/html`
+- **Accept**: `application/ld+json`, `text/csv`, `text/html`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -308,7 +308,7 @@ No authorization required
 ## `putProductBundleItemItem()`
 
 ```php
-putProductBundleItemItem($id, $product_bundle_item_jsonld_product_bundle_item_read): \Vilo\ProductService\Model\ProductBundleItemJsonldProductBundleItemRead
+putProductBundleItemItem($id, $product_bundle_item_jsonld): \Vilo\ProductService\Model\ProductBundleItemJsonldProductBundleItemRead
 ```
 
 Replaces the ProductBundleItem resource.
@@ -329,10 +329,10 @@ $apiInstance = new Vilo\ProductService\Api\ProductBundleItemApi(
     new GuzzleHttp\Client()
 );
 $id = 'id_example'; // string | Resource identifier
-$product_bundle_item_jsonld_product_bundle_item_read = new \Vilo\ProductService\Model\ProductBundleItemJsonldProductBundleItemRead(); // \Vilo\ProductService\Model\ProductBundleItemJsonldProductBundleItemRead | The updated ProductBundleItem resource
+$product_bundle_item_jsonld = new \Vilo\ProductService\Model\ProductBundleItemJsonld(); // \Vilo\ProductService\Model\ProductBundleItemJsonld | The updated ProductBundleItem resource
 
 try {
-    $result = $apiInstance->putProductBundleItemItem($id, $product_bundle_item_jsonld_product_bundle_item_read);
+    $result = $apiInstance->putProductBundleItemItem($id, $product_bundle_item_jsonld);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductBundleItemApi->putProductBundleItemItem: ', $e->getMessage(), PHP_EOL;
@@ -344,7 +344,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Resource identifier |
- **product_bundle_item_jsonld_product_bundle_item_read** | [**\Vilo\ProductService\Model\ProductBundleItemJsonldProductBundleItemRead**](../Model/ProductBundleItemJsonldProductBundleItemRead.md)| The updated ProductBundleItem resource |
+ **product_bundle_item_jsonld** | [**\Vilo\ProductService\Model\ProductBundleItemJsonld**](../Model/ProductBundleItemJsonld.md)| The updated ProductBundleItem resource |
 
 ### Return type
 
@@ -356,8 +356,8 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: `application/ld+json`, `application/hal+json`, `application/vnd.api+json`, `application/json`, `application/xml`, `text/xml`, `application/x-yaml`, `text/csv`, `text/html`
-- **Accept**: `application/ld+json`, `application/hal+json`, `application/vnd.api+json`, `application/json`, `application/xml`, `text/xml`, `application/x-yaml`, `text/csv`, `text/html`
+- **Content-Type**: `application/ld+json`, `text/csv`, `text/html`
+- **Accept**: `application/ld+json`, `text/csv`, `text/html`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

@@ -4,19 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**context** | **string** |  | [optional] [readonly]
 **id** | **string** |  | [optional] [readonly]
 **type** | **string** |  | [optional] [readonly]
+**context** | [**OneOfStringMap**](OneOfStringMap.md) |  | [optional] [readonly]
 **id** | **string** |  | [optional] [readonly]
-**name** | **string** |  |
-**sku** | **string** |  |
 **approved_at** | [**\DateTime**](\DateTime.md) |  | [optional] [readonly]
-**is_active** | **bool** |  |
-**ean** | **string** |  | [optional]
-**fk_attribute_set** | **string** |  | [optional]
+**is_active** | **bool** |  | [optional] [readonly]
 **product_group_items** | **string[]** |  | [optional]
 **product_bundle_children** | **string[]** |  | [optional]
 **product_bundle_parents** | **string[]** |  | [optional]
+**attribute_sets** | **string[]** | TODO sending attribute sets with the request payload is out of the scope of the POC. | [optional] [readonly]
 **is_bundle** | **bool** | ApiFilter(BooleanFilter::class). | [optional] [readonly]
 **is_part_of_a_bundle** | **bool** | ApiFilter(BooleanFilter::class). | [optional] [readonly]
 

@@ -131,7 +131,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/ld+json`, `application/hal+json`, `application/vnd.api+json`, `application/json`, `application/xml`, `text/xml`, `application/x-yaml`, `text/csv`, `text/html`
+- **Accept**: `application/ld+json`, `text/csv`, `text/html`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -187,7 +187,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/ld+json`, `application/hal+json`, `application/vnd.api+json`, `application/json`, `application/xml`, `text/xml`, `application/x-yaml`, `text/csv`, `text/html`
+- **Accept**: `application/ld+json`, `text/csv`, `text/html`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -196,7 +196,7 @@ No authorization required
 ## `patchProductGroupItem()`
 
 ```php
-patchProductGroupItem($id, $product_group_jsonld): \Vilo\ProductService\Model\ProductGroupJsonld
+patchProductGroupItem($id, $product_group): \Vilo\ProductService\Model\ProductGroupJsonld
 ```
 
 Updates the ProductGroup resource.
@@ -217,10 +217,10 @@ $apiInstance = new Vilo\ProductService\Api\ProductGroupApi(
     new GuzzleHttp\Client()
 );
 $id = 'id_example'; // string | Resource identifier
-$product_group_jsonld = new \Vilo\ProductService\Model\ProductGroupJsonld(); // \Vilo\ProductService\Model\ProductGroupJsonld | The updated ProductGroup resource
+$product_group = new \Vilo\ProductService\Model\ProductGroup(); // \Vilo\ProductService\Model\ProductGroup | The updated ProductGroup resource
 
 try {
-    $result = $apiInstance->patchProductGroupItem($id, $product_group_jsonld);
+    $result = $apiInstance->patchProductGroupItem($id, $product_group);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductGroupApi->patchProductGroupItem: ', $e->getMessage(), PHP_EOL;
@@ -232,7 +232,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Resource identifier |
- **product_group_jsonld** | [**\Vilo\ProductService\Model\ProductGroupJsonld**](../Model/ProductGroupJsonld.md)| The updated ProductGroup resource |
+ **product_group** | [**\Vilo\ProductService\Model\ProductGroup**](../Model/ProductGroup.md)| The updated ProductGroup resource |
 
 ### Return type
 
@@ -244,8 +244,8 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: `application/merge-patch+json`, `application/vnd.api+json`
-- **Accept**: `application/ld+json`, `application/hal+json`, `application/vnd.api+json`, `application/json`, `application/xml`, `text/xml`, `application/x-yaml`, `text/csv`, `text/html`
+- **Content-Type**: `application/merge-patch+json`
+- **Accept**: `application/ld+json`, `text/csv`, `text/html`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -300,8 +300,8 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: `application/ld+json`, `application/hal+json`, `application/vnd.api+json`, `application/json`, `application/xml`, `text/xml`, `application/x-yaml`, `text/csv`, `text/html`
-- **Accept**: `application/ld+json`, `application/hal+json`, `application/vnd.api+json`, `application/json`, `application/xml`, `text/xml`, `application/x-yaml`, `text/csv`, `text/html`
+- **Content-Type**: `application/ld+json`, `text/csv`, `text/html`
+- **Accept**: `application/ld+json`, `text/csv`, `text/html`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -358,8 +358,8 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: `application/ld+json`, `application/hal+json`, `application/vnd.api+json`, `application/json`, `application/xml`, `text/xml`, `application/x-yaml`, `text/csv`, `text/html`
-- **Accept**: `application/ld+json`, `application/hal+json`, `application/vnd.api+json`, `application/json`, `application/xml`, `text/xml`, `application/x-yaml`, `text/csv`, `text/html`
+- **Content-Type**: `application/ld+json`, `text/csv`, `text/html`
+- **Accept**: `application/ld+json`, `text/csv`, `text/html`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

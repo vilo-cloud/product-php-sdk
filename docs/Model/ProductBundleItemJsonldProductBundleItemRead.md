@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**context** | **string** |  | [optional] [readonly]
+**context** | [**OneOfStringMap**](OneOfStringMap.md) |  | [optional] [readonly]
 **id** | **string** |  | [optional] [readonly]
 **type** | **string** |  | [optional] [readonly]
 **id** | **string** |  | [optional] [readonly]

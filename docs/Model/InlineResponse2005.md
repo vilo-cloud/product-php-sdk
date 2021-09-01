@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**hydramember** | [**\Vilo\ProductService\Model\AttributeSetJsonldRead[]**](AttributeSetJsonldRead.md) |  |
+**hydramember** | [**\Vilo\ProductService\Model\AttributeReferenceJsonldAttributeRead[]**](AttributeReferenceJsonldAttributeRead.md) |  |
 **hydratotal_items** | **int** |  | [optional]
 **hydraview** | [**\Vilo\ProductService\Model\InlineResponse200HydraView**](InlineResponse200HydraView.md) |  | [optional]
 **hydrasearch** | [**\Vilo\ProductService\Model\InlineResponse200HydraSearch**](InlineResponse200HydraSearch.md) |  | [optional]

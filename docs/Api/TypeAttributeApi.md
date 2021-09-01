@@ -4,71 +4,15 @@ All URIs are relative to https://product-service.staging.vilo.cloud.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**productsAttributesGetItemTypeAttributeItem()**](TypeAttributeApi.md#productsAttributesGetItemTypeAttributeItem) | **GET** /products/type-attributes/{id} | Retrieves a TypeAttribute resource.
-[**productsTypeAttributeCreate()**](TypeAttributeApi.md#productsTypeAttributeCreate) | **POST** /products/type-attributes | Creates a Type Attribute for Product
-[**productsTypeAttributeGetCollectionTypeAttributeCollection()**](TypeAttributeApi.md#productsTypeAttributeGetCollectionTypeAttributeCollection) | **GET** /products/type-attributes | Retrieves the collection of TypeAttribute resources.
+[**productsTypeAttributeCreate()**](TypeAttributeApi.md#productsTypeAttributeCreate) | **POST** /products/type_attributes | Creates a Type Attribute for Product
+[**typeAttributeGetCollectionProductCollection()**](TypeAttributeApi.md#typeAttributeGetCollectionProductCollection) | **GET** /products/type_attributes | Get a collection of Attribute Type for the Product entity.
+[**typeAttributeGetItemProductItem()**](TypeAttributeApi.md#typeAttributeGetItemProductItem) | **GET** /products/type_attributes/{id} | Get an Attribute Type for the Product entity.
 
-
-## `productsAttributesGetItemTypeAttributeItem()`
-
-```php
-productsAttributesGetItemTypeAttributeItem($id): \Vilo\ProductService\Model\TypeAttributeJsonldProductTypeAttributeRead
-```
-
-Retrieves a TypeAttribute resource.
-
-Retrieves a TypeAttribute resource.
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new Vilo\ProductService\Api\TypeAttributeApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$id = 'id_example'; // string | Resource identifier
-
-try {
-    $result = $apiInstance->productsAttributesGetItemTypeAttributeItem($id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TypeAttributeApi->productsAttributesGetItemTypeAttributeItem: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Resource identifier |
-
-### Return type
-
-[**\Vilo\ProductService\Model\TypeAttributeJsonldProductTypeAttributeRead**](../Model/TypeAttributeJsonldProductTypeAttributeRead.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/ld+json`, `application/hal+json`, `application/vnd.api+json`, `application/json`, `application/xml`, `text/xml`, `application/x-yaml`, `text/csv`, `text/html`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
 
 ## `productsTypeAttributeCreate()`
 
 ```php
-productsTypeAttributeCreate($type_attribute_product_create): \Vilo\ProductService\Model\InlineResponse2006
+productsTypeAttributeCreate($type_attribute_jsonld_attribute_write): \Vilo\ProductService\Model\TypeAttributeJsonldAttributeRead
 ```
 
 Creates a Type Attribute for Product
@@ -88,10 +32,10 @@ $apiInstance = new Vilo\ProductService\Api\TypeAttributeApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$type_attribute_product_create = new \Vilo\ProductService\Model\TypeAttributeProductCreate(); // \Vilo\ProductService\Model\TypeAttributeProductCreate | New Product Type Attribute
+$type_attribute_jsonld_attribute_write = new \Vilo\ProductService\Model\TypeAttributeJsonldAttributeWrite(); // \Vilo\ProductService\Model\TypeAttributeJsonldAttributeWrite | Creates a TypeAttribute on Product.
 
 try {
-    $result = $apiInstance->productsTypeAttributeCreate($type_attribute_product_create);
+    $result = $apiInstance->productsTypeAttributeCreate($type_attribute_jsonld_attribute_write);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TypeAttributeApi->productsTypeAttributeCreate: ', $e->getMessage(), PHP_EOL;
@@ -102,11 +46,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **type_attribute_product_create** | [**\Vilo\ProductService\Model\TypeAttributeProductCreate**](../Model/TypeAttributeProductCreate.md)| New Product Type Attribute | [optional]
+ **type_attribute_jsonld_attribute_write** | [**\Vilo\ProductService\Model\TypeAttributeJsonldAttributeWrite**](../Model/TypeAttributeJsonldAttributeWrite.md)| Creates a TypeAttribute on Product. | [optional]
 
 ### Return type
 
-[**\Vilo\ProductService\Model\InlineResponse2006**](../Model/InlineResponse2006.md)
+[**\Vilo\ProductService\Model\TypeAttributeJsonldAttributeRead**](../Model/TypeAttributeJsonldAttributeRead.md)
 
 ### Authorization
 
@@ -114,22 +58,22 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: `application/json`
-- **Accept**: `application/ld+json`, `application/hal+json`, `application/vnd.api+json`, `application/json`, `application/xml`, `text/xml`, `application/x-yaml`, `text/csv`, `text/html`
+- **Content-Type**: `application/ld+json`
+- **Accept**: `application/ld+json`, `text/csv`, `text/html`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `productsTypeAttributeGetCollectionTypeAttributeCollection()`
+## `typeAttributeGetCollectionProductCollection()`
 
 ```php
-productsTypeAttributeGetCollectionTypeAttributeCollection($page, $items_per_page): \Vilo\ProductService\Model\InlineResponse2006
+typeAttributeGetCollectionProductCollection($page, $items_per_page): \Vilo\ProductService\Model\InlineResponse2009
 ```
 
-Retrieves the collection of TypeAttribute resources.
+Get a collection of Attribute Type for the Product entity.
 
-Retrieves the collection of TypeAttribute resources.
+Get a collection of Attribute Type for the Product entity.
 
 ### Example
 
@@ -148,10 +92,10 @@ $page = 1; // int | The collection page number
 $items_per_page = 30; // int | The number of items per page
 
 try {
-    $result = $apiInstance->productsTypeAttributeGetCollectionTypeAttributeCollection($page, $items_per_page);
+    $result = $apiInstance->typeAttributeGetCollectionProductCollection($page, $items_per_page);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TypeAttributeApi->productsTypeAttributeGetCollectionTypeAttributeCollection: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TypeAttributeApi->typeAttributeGetCollectionProductCollection: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -164,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Vilo\ProductService\Model\InlineResponse2006**](../Model/InlineResponse2006.md)
+[**\Vilo\ProductService\Model\InlineResponse2009**](../Model/InlineResponse2009.md)
 
 ### Authorization
 
@@ -173,7 +117,63 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/ld+json`, `application/hal+json`, `application/vnd.api+json`, `application/json`, `application/xml`, `text/xml`, `application/x-yaml`, `text/csv`, `text/html`
+- **Accept**: `application/ld+json`, `text/csv`, `text/html`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `typeAttributeGetItemProductItem()`
+
+```php
+typeAttributeGetItemProductItem($id): \Vilo\ProductService\Model\TypeAttributeJsonldAttributeRead
+```
+
+Get an Attribute Type for the Product entity.
+
+Get an Attribute Type for the Product entity.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new Vilo\ProductService\Api\TypeAttributeApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$id = 'id_example'; // string | The Attribute Type ID
+
+try {
+    $result = $apiInstance->typeAttributeGetItemProductItem($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TypeAttributeApi->typeAttributeGetItemProductItem: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| The Attribute Type ID |
+
+### Return type
+
+[**\Vilo\ProductService\Model\TypeAttributeJsonldAttributeRead**](../Model/TypeAttributeJsonldAttributeRead.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/ld+json`, `text/csv`, `text/html`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

@@ -4,7 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**context** | [**OneOfStringMap**](OneOfStringMap.md) |  | [optional] [readonly]
 **id** | **string** |  | [optional] [readonly]
-**name** | **string** |  | [optional]
+**type** | **string** |  | [optional] [readonly]
+**id** | **string** |  | [optional] [readonly]
+**name** | **string** |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

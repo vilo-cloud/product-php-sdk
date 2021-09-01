@@ -4,12 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**context** | [**OneOfStringMap**](OneOfStringMap.md) |  | [optional] [readonly]
 **id** | **string** |  | [optional] [readonly]
-**name** | **string** |  |
-**sku** | **string** |  |
-**is_active** | **bool** |  |
-**ean** | **string** |  | [optional]
-**fk_attribute_set** | **string** |  | [optional]
+**type** | **string** |  | [optional] [readonly]
+**id** | **string** |  | [optional] [readonly]
 **product_group_items** | **string[]** |  | [optional]
 **product_bundle_children** | **string[]** |  | [optional]
 **product_bundle_parents** | **string[]** |  | [optional]
